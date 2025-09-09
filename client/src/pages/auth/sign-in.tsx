@@ -22,11 +22,14 @@ const SignIn = () => {
         <div className="absolute inset-0 flex flex-col items-end justify-end pt-8 pl-8">
           <div className="w-full max-w-3xl mx-0 pr-5">
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white">
-              Hi, I'm your AI-powered personal finance app, Cashlet!
+              Welcome back — manage your money with confidence
             </h1>
             <p className="mt-4 text-gray-600 dark:text-muted-foreground">
-              Cashlet provides insights, monthly reports, CSV import, recurring
-              transactions, all powered by advanced AI technology. 🚀
+              Cashlet is your AI-powered personal finance assistant. Helping you
+              track your spending, upload receipts, import CSV files, and manage
+              recurring transactions. Cashlet gives you clear, AI-driven monthly
+              reports so you can make smarter financial decisions with
+              confidence.
             </p>
           </div>
           <div className="relative max-w-3xl h-full w-full overflow-hidden mt-3">
