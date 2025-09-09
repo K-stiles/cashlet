@@ -49,7 +49,7 @@ Smart personal finance SaaS with AI-powered receipts, rich analytics, and automa
 ### 1) Clone and install
 
 ```bash
-git clone <your-repo-url> cashlet && cd cashlet
+git clone https://github.com/K-stiles/cashlet.git cashlet && cd cashlet
 
 # Install backend deps
 cd backend && npm install
