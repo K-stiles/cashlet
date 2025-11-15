@@ -1,6 +1,7 @@
-import { Button } from "@/components/ui/button";
+import {  buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -34,10 +35,10 @@ const LeftCol = () => (
       effortlessly.
     </p>
 
-    <Button className="mb-8 flex w-fit items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white transition ">
+    <Link to="/sign-up" className={cn( buttonVariants({variant:"default"}), "mb-8 flex w-fit items-center gap-2 rounded-lg bg-primary px-8 py-4 text-white transition ")}>
       <span className="font-medium">Start Your Financial Journey</span>
       <ArrowRight className="h-5 w-5" />
-    </Button>
+    </Link>
 
     <div className="flex items-center gap-4">
       <div className="flex -space-x-2">

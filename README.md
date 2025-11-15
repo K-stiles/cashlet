@@ -5,7 +5,7 @@
 
 *Cashlet is your intelligent financial companion that simplifies money management through AI-powered insights, automated reporting, and comprehensive expense tracking. Take control of your finances with confidence.*
 
-![Cashlet Dashboard](client/src/assets/images/dashboard_.png)
+![Cashlet Landing page](/cashlet.png)
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![Tech Stack](https://img.shields.io/badge/stack-TypeScript%20%7C%20React%20%7C%20Node.js-blue)]()
@@ -84,27 +84,6 @@
 
 ```
 
----
-
-## 📸 Screenshots
-
-### Dashboard Overview
-![Dashboard Overview](./screenshots/dashboard-overview.png)
-*Real-time financial overview with interactive charts and KPI summaries*
-
-### Transaction Management
-![Transaction Management](./screenshots/transactions.png)
-*Advanced transaction tracking with search, filters, and bulk operations*
-
-### AI Receipt Scanner
-![AI Receipt Scanner](./screenshots/receipt-scanner.png)
-*Upload receipts and extract transaction data automatically using AI*
-
-### Analytics & Reports
-![Analytics Dashboard](./screenshots/analytics.png)
-*Comprehensive analytics with expense breakdowns and trend analysis*
-
----
 
 ## 🚀 Getting Started
 
@@ -295,6 +274,28 @@ This creates demo data including:
 ├── README.md                   # Project documentation
 └── .gitignore                 # Git ignore rules
 ```
+
+---
+
+## 📸 Screenshots
+
+### Dashboard Overview
+![Cashlet Dashboard Overview](client/src/assets/images/dashboard_.png)
+*Real-time financial overview with interactive charts and KPI summaries*
+
+### Transaction Management
+![Transaction Management](./screenshots/transactions.png)
+*Advanced transaction tracking with search, filters, and bulk operations*
+
+### AI Receipt Scanner
+![AI Receipt Scanner](./screenshots/receipt-scanner.png)
+*Upload receipts and extract transaction data automatically using AI*
+
+### Analytics & Reports
+![Analytics Dashboard](./screenshots/analytics.png)
+*Comprehensive analytics with expense breakdowns and trend analysis*
+
+---
 
 ---
 

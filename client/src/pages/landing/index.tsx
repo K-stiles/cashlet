@@ -1,12 +1,12 @@
 import Header from "./_components/header";
 import Hero from "./_components/hero";
 import TransactionCard from "./_components/transaction-card";
-// import CompanyBrands from "./_components/company-brands";
 import FeatureCards from "./_components/feature-cards";
 import FAQ from "./_components/faq";
 import Newsletter from "./_components/newsletter";
 import Footer from "./_components/footer";
 import LogoCloud from "@/components/logo-cloud";
+// import CompanyBrands from "./_components/company-brands";
 
 export default function Landing() {
   return (

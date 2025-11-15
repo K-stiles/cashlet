@@ -14,7 +14,7 @@ import {
     DropdownMenuSeparator,
         DropdownMenuTrigger,
   } from "../ui/dropdown-menu"
-  
+
 export function UserNav({
   userName,
   profilePicture,
@@ -34,7 +34,7 @@ export function UserNav({
           <Avatar className="h-10 w-10 !cursor-pointer ">
             <AvatarImage
               src={profilePicture || ""}
-              className="!cursor-pointer "
+              className="!cursor-pointer h-10 w-10 object-cover"
             />
             <AvatarFallback
               className="!bg-[var(--secondary-dark-color)] border !border-gray-700

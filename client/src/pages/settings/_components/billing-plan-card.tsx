@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -7,12 +6,12 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
+import { AlertDialogPopup } from "./alert-dialogue-popup";
 
 type BillingPlanCardProps = {
   title: string;
   price: string;
   features: string[];
-  ctaLink: string;
   ctaLabel?: string;
 };
 
@@ -20,7 +19,6 @@ const BillingPlanCard = ({
   title,
   price,
   features,
-  ctaLink,
   ctaLabel = "Upgrade",
 }: BillingPlanCardProps) => {
   return (
@@ -37,14 +35,7 @@ const BillingPlanCard = ({
         </ul>
       </CardContent>
       <CardFooter>
-        <a
-          href={ctaLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="w-full"
-        >
-          <Button className="w-full">{ctaLabel}</Button>
-        </a>
+          <AlertDialogPopup label={ctaLabel} />
       </CardFooter>
     </Card>
   );

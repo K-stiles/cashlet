@@ -20,7 +20,6 @@ const Billing = () => {
             status="Active"
             nextInvoice={null}
             paymentMethod={null}
-            upgradeLink="https://tinyurl.com/extended-stripe-integration"
           />
         </div>
       </div>
@@ -37,7 +36,6 @@ const Billing = () => {
             "Automated monthly reports",
             "Email support",
           ]}
-          ctaLink="https://tinyurl.com/extended-stripe-integration"
         />
         <BillingPlanCard
           title="Pro - Yearly"
@@ -47,7 +45,6 @@ const Billing = () => {
             "2 months free",
             "Priority email support",
           ]}
-          ctaLink="https://tinyurl.com/extended-stripe-integration"
         />
       </div>
     </div>

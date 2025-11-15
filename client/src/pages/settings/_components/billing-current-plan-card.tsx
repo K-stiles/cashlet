@@ -6,14 +6,13 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { AlertDialogPopup } from "./alert-dialogue-popup";
 
 type BillingCurrentPlanCardProps = {
   planName: string;
   status: string;
   nextInvoice?: string | null;
   paymentMethod?: string | null;
-  upgradeLink: string;
 };
 
 const BillingCurrentPlanCard = ({
@@ -21,7 +20,6 @@ const BillingCurrentPlanCard = ({
   status,
   nextInvoice,
   paymentMethod,
-  upgradeLink,
 }: BillingCurrentPlanCardProps) => {
   return (
     <Card>
@@ -52,9 +50,9 @@ const BillingCurrentPlanCard = ({
           Upgrade to unlock AI-powered exports, unlimited history, and automated
           reports.
         </p>
-        <a href={upgradeLink} target="_blank" rel="noopener noreferrer">
-          <Button>See premium options</Button>
-        </a>
+
+          {/* <Button>See premium options</Button> */}
+           <AlertDialogPopup label={"See premium options"} />
       </CardFooter>
     </Card>
   );
