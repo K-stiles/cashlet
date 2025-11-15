@@ -1,12 +1,12 @@
 import Header from "./_components/header";
 import Hero from "./_components/hero";
-import PaymentBrands from "./_components/payment-brands";
 import TransactionCard from "./_components/transaction-card";
 // import CompanyBrands from "./_components/company-brands";
 import FeatureCards from "./_components/feature-cards";
 import FAQ from "./_components/faq";
 import Newsletter from "./_components/newsletter";
 import Footer from "./_components/footer";
+import LogoCloud from "@/components/logo-cloud";
 
 export default function Landing() {
   return (
@@ -26,7 +26,7 @@ export default function Landing() {
         <div className="relative z-10">
           <Header />
           <Hero />
-          <PaymentBrands />
+          <LogoCloud />
         </div>
       </div>
 
