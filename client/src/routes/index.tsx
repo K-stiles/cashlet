@@ -8,6 +8,7 @@ import BaseLayout from "@/layouts/base-layout";
 import AuthRoute from "./authRoute";
 import ProtectedRoute from "./protectedRoute";
 import useAuthExpiration from "@/hooks/use-auth-expiration";
+import NotFound404 from "@/pages/404";
 
 function AppRoutes() {
   useAuthExpiration();
@@ -48,7 +49,7 @@ function AppRoutes() {
         </Route>
 
         {/* Catch-all for undefined routes */}
-        <Route path="*" element={<>404</>} />
+        <Route path="*" element={<NotFound404 />} />
       </Routes>
     </BrowserRouter>
   );
