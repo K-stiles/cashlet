@@ -1,30 +1,77 @@
-## Cashlet 💸
+# 💸 Cashlet
 
-Smart personal finance SaaS with AI-powered receipts, rich analytics, and automated reporting.
+**AI-Powered Personal Finance Management Platform**
+
+
+*Cashlet is your intelligent financial companion that simplifies money management through AI-powered insights, automated reporting, and comprehensive expense tracking. Take control of your finances with confidence.*
 
 ![Cashlet Dashboard](client/src/assets/images/dashboard_.png)
 
----
-
-### 🔧 Tech Stack
-
-- **Backend**: Node.js, Express, TypeScript, Passport JWT, Zod, Mongoose, Multer, Cloudinary SDK, Resend, node-cron, Google Generative AI (Gemini)
-- **Frontend**: React, TypeScript, Vite, React Router, Redux Toolkit + RTK Query, Redux Persist, Tailwind CSS, Radix UI, Recharts, React Hook Form, Zod
-- **Database**: MongoDB (Mongoose ODM)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Tech Stack](https://img.shields.io/badge/stack-TypeScript%20%7C%20React%20%7C%20Node.js-blue)]()
+[![AI](https://img.shields.io/badge/AI-Google%20Gemini-orange)](https://ai.google.com/)
 
 ---
 
-### ✨ Key Features
+## 📋 Table of Contents
 
-- **Authentication** 🔐: Email + Password, JWT access/refresh tokens
-- **Transactions** 🧾: Create, edit, duplicate, bulk delete, pagination, search/filter
-- **CSV Import** 📥: Upload transactions via CSV
-- **AI Receipt Scanner** 🤖🧾: Extract data from receipts using Gemini
-- **Analytics Dashboard** 📈: MongoDB aggregate-driven KPIs, line and pie charts
-- **Date Ranges** 📅: Quick filters (e.g., last 7/30 days, custom)
-- **Recurring Transactions** ♻️: Automated with cron jobs
-- **Monthly Reports** 📧: Auto-generated and emailed to users
-- **Profile Photos** 🖼️: Cloudinary upload and storage
+- [Tech Stack](#-tech-stack)
+- [Key Features](#-key-features)
+- [Screenshots](#-screenshots)
+- [Getting Started](#-getting-started)
+- [Project Structure](#-project-structure)
+- [API Documentation](#-api-documentation)
+- [Contributing](#-contributing)
+- [License](#-license)
+
+---
+
+## 🚀 Tech Stack
+
+### **Frontend**
+- **React 19** - Modern UI library with hooks and concurrent features
+- **TypeScript** - Type-safe JavaScript development
+- **Vite** - Fast build tool and development server
+- **Tailwind CSS** - Utility-first CSS framework
+- **Redux Toolkit** - State management with RTK Query
+- **Radix UI** - Accessible component primitives
+- **React Hook Form** - Performant forms with validation
+- **Recharts** - Composable charting library
+- **Lucide React** - Beautiful SVG icons
+
+### **Backend**
+- **Node.js** - JavaScript runtime environment
+- **Express.js** - Fast, unopinionated web framework
+- **TypeScript** - Type-safe server-side development
+- **MongoDB** - NoSQL database with Mongoose ODM
+- **JWT** - JSON Web Token authentication
+- **Google Gemini AI** - AI-powered receipt scanning
+- **Node Cron** - Scheduled task automation
+- **Cloudinary** - Image upload and management
+
+### **Other Tools**
+- **Passport.js** - Authentication middleware
+- **Zod** - Schema validation
+- **Bcrypt** - Password hashing
+- **Resend** - Email service integration
+- **Papa Parse** - CSV parsing library
+- **Date-fns** - Date utility library
+
+---
+
+## ✨ Key Features
+
+- 🔐 **Secure Authentication** - Email/password login with JWT tokens and refresh token rotation
+- 💰 **Transaction Management** - Create, edit, duplicate, and bulk delete transactions with advanced filtering
+- 📥 **CSV Import** - Bulk import transactions via CSV files with intelligent column mapping
+- 🤖 **AI Receipt Scanner** - Extract transaction data from receipts using Google Gemini AI
+- 📊 **Analytics Dashboard** - Rich visualizations with line charts, pie charts, and KPI summaries
+- 📅 **Date Range Filtering** - Quick filters (7 days, 30 days, custom ranges) across all features
+- ♻️ **Recurring Transactions** - Automated processing with cron job scheduling
+- 📧 **Monthly Reports** - AI-generated financial insights delivered via email
+- 🖼️ **Profile Management** - Cloudinary-powered profile photo uploads
+- 🌙 **Dark Mode** - Complete theme switching with system preference detection
+- 📱 **Responsive Design** - Optimized for desktop, tablet, and mobile devices
 
 ---
 
@@ -34,141 +81,299 @@ Smart personal finance SaaS with AI-powered receipts, rich analytics, and automa
 ./
 ├─ backend/   # Express API, cron jobs, mailers, MongoDB models
 └─ client/    # React app (Vite), Redux Toolkit, Tailwind
+
 ```
+
+---
+
+## 📸 Screenshots
+
+### Dashboard Overview
+![Dashboard Overview](./screenshots/dashboard-overview.png)
+*Real-time financial overview with interactive charts and KPI summaries*
+
+### Transaction Management
+![Transaction Management](./screenshots/transactions.png)
+*Advanced transaction tracking with search, filters, and bulk operations*
+
+### AI Receipt Scanner
+![AI Receipt Scanner](./screenshots/receipt-scanner.png)
+*Upload receipts and extract transaction data automatically using AI*
+
+### Analytics & Reports
+![Analytics Dashboard](./screenshots/analytics.png)
+*Comprehensive analytics with expense breakdowns and trend analysis*
 
 ---
 
 ## 🚀 Getting Started
 
-### ✅ Prerequisites
+### Prerequisites
 
-- Node.js 18+ (LTS recommended)
-- npm 9+
-- MongoDB instance (local or hosted)
+Ensure you have the following installed:
+- **Node.js** (v18.0 or higher)
+- **npm** or **yarn** package manager
+- **MongoDB** (local installation or MongoDB Atlas)
+- **Git** version control
 
-### 1) Clone and install
+### Installation
 
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/K-stiles/cashlet.git
+   cd cashlet
+   ```
+
+2. **Install backend dependencies**
+   ```bash
+   cd backend
+   npm install
+   ```
+
+3. **Install frontend dependencies**
+   ```bash
+   cd ../client
+   npm install
+   ```
+
+### Configuration
+
+Create environment files for both backend and frontend:
+
+**Backend Environment (`backend/.env`)**
 ```bash
-git clone https://github.com/K-stiles/cashlet.git cashlet && cd cashlet
+# Database Configuration
+DATABASE_URL=mongodb://localhost:27017/cashlet
+# OR for MongoDB Atlas:
+# DATABASE_URL=mongodb+srv://username:password@cluster.mongodb.net/cashlet
 
-# Install backend deps
-cd backend && npm install
+# JWT Configuration
+JWT_SECRET=your_super_secure_jwt_secret_key
+JWT_REFRESH_SECRET=your_super_secure_refresh_secret
 
-# Install frontend deps
-cd ../client && npm install
-```
+# Google AI Configuration
+GOOGLE_AI_API_KEY=your_google_gemini_api_key
 
-### 2) Configure environment variables
+# Cloudinary Configuration (for file uploads)
+CLOUDINARY_CLOUD_NAME=your_cloudinary_name
+CLOUDINARY_API_KEY=your_cloudinary_api_key
+CLOUDINARY_API_SECRET=your_cloudinary_secret
 
-Create a `.env` file inside both `backend/` and `client/`.
+# Email Configuration (Resend)
+RESEND_API_KEY=your_resend_api_key
+FROM_EMAIL=noreply@yourdomain.com
 
-Backend (`backend/.env`):
-
-```bash
-# Server
+# Application Configuration
 NODE_ENV=development
 PORT=8000
-BASE_PATH=/api
-
-# Database
-MONGO_URI=mongodb://localhost:27017/cashlet
-
-# Auth
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRES_IN=15m
-JWT_REFRESH_SECRET=your_refresh_secret
-JWT_REFRESH_EXPIRES_IN=7d
-
-# AI (Gemini)
-GEMINI_API_KEY=your_gemini_api_key
-
-# Cloudinary
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_API_KEY=your_api_key
-CLOUDINARY_API_SECRET=your_api_secret
-
-# Email (Resend)
-RESEND_API_KEY=your_resend_api_key
-RESEND_MAILER_SENDER="Cashlet <no-reply@yourdomain.com>"
-
-# CORS
+BASE_PATH=/api/v1
 FRONTEND_ORIGIN=http://localhost:5173
 ```
 
-Frontend (`client/.env`):
-
+**Frontend Environment (`client/.env`)**
 ```bash
-VITE_API_URL=http://localhost:8000/api
+VITE_API_BASE_URL=http://localhost:8000/api/v1
 ```
 
-Notes:
+### Running the Application
 
-- `BASE_PATH` defaults to `/api`. If changed, update `VITE_API_URL` accordingly.
-- `FRONTEND_ORIGIN` must match your Vite dev server origin (default `http://localhost:5173`).
+**Development Mode:**
 
-### 3) Run the app (development)
+1. **Start the backend server**
+   ```bash
+   cd backend
+   npm run dev
+   ```
+   Backend will run on `http://localhost:8000`
 
-Run API and client in separate terminals.
+2. **Start the frontend development server**
+   ```bash
+   cd client
+   npm run dev
+   ```
+   Frontend will run on `http://localhost:5173`
 
-Backend (from `backend/`):
+**Production Mode:**
 
+1. **Build and start backend**
+   ```bash
+   cd backend
+   npm run build
+   npm start
+   ```
+
+2. **Build and preview frontend**
+   ```bash
+   cd client
+   npm run build
+   npm run preview
+   ```
+
+### Database Setup
+
+**Option 1: Local MongoDB**
 ```bash
-npm run dev
+# Install MongoDB locally and start the service
+mongod --dbpath /path/to/your/db
 ```
 
-Frontend (from `client/`):
+**Option 2: MongoDB Atlas**
+1. Create a free account at [MongoDB Atlas](https://cloud.mongodb.com)
+2. Create a new cluster
+3. Get your connection string
+4. Update `DATABASE_URL` in your `.env` file
+
+### Seeding Sample Data
+
+To populate your database with sample transactions and users:
 
 ```bash
-npm run dev
-```
-
-The app will be available at `http://localhost:5173` and will proxy API requests to `http://localhost:8000/api` via `VITE_API_URL`.
-
-### 4) Seed sample data (optional)
-
-From `backend/`:
-
-```bash
+cd backend
 npm run seed
 ```
 
-This populates the database with sample users/transactions for quick testing.
+This creates demo data including:
+- Sample user accounts
+- Various transaction types
+- Analytics data for testing
+- Report history
 
 ---
 
-## 🧰 Available Scripts
+## 📁 Project Structure
 
-### Backend (in `backend/`)
-
-- `npm run dev`: Start the API with live reload (ts-node-dev)
-- `npm run build`: Type-check and build to `dist/`
-- `npm start`: Run the compiled server from `dist/`
-- `npm run seed`: Seed MongoDB with demo data
-
-### Frontend (in `client/`)
-
-- `npm run dev`: Start Vite dev server
-- `npm run build`: Type-check and build for production
-- `npm run preview`: Preview the production build
+```
+./
+├── backend/                    # Express.js API Server
+│   ├── src/
+│   │   ├── @types/            # TypeScript type definitions
+│   │   ├── config/            # Database, auth, and service configs
+│   │   ├── controllers/       # Request handlers and business logic
+│   │   ├── cron/              # Scheduled job definitions
+│   │   │   └── jobs/          # Individual cron job implementations
+│   │   ├── enums/             # Application constants and enums
+│   │   ├── mailers/           # Email templates and sending logic
+│   │   │   └── templates/     # HTML email templates
+│   │   ├── middlewares/       # Express middleware functions
+│   │   ├── models/            # MongoDB/Mongoose data models
+│   │   ├── routes/            # API route definitions
+│   │   ├── seeds/             # Database seeding scripts
+│   │   ├── services/          # Business logic and data operations
+│   │   ├── utils/             # Helper functions and utilities
+│   │   └── validators/        # Zod schema validation
+│   ├── package.json
+│   └── tsconfig.json
+│
+├── client/                     # React Frontend Application
+│   ├── src/
+│   │   ├── @types/            # Frontend type definitions
+│   │   ├── app/               # Redux store configuration
+│   │   ├── assets/            # Static assets (images, fonts)
+│   │   ├── components/        # Reusable UI components
+│   │   │   ├── ui/            # Base UI components (shadcn/ui)
+│   │   │   ├── navbar/        # Navigation components
+│   │   │   └── transaction/   # Transaction-specific components
+│   │   ├── constant/          # Application constants
+│   │   ├── context/           # React context providers
+│   │   ├── data/              # Sample data and mock files
+│   │   ├── features/          # Feature-based modules (RTK Query)
+│   │   │   ├── analytics/     # Analytics API and types
+│   │   │   ├── auth/          # Authentication logic
+│   │   │   ├── report/        # Report management
+│   │   │   ├── transaction/   # Transaction management
+│   │   │   └── user/          # User management
+│   │   ├── hooks/             # Custom React hooks
+│   │   ├── layouts/           # Page layout components
+│   │   ├── lib/               # Utility libraries and helpers
+│   │   ├── pages/             # Page components and routing
+│   │   └── routes/            # Route definitions and guards
+│   ├── package.json
+│   ├── tailwind.config.js
+│   ├── tsconfig.json
+│   └── vite.config.ts
+│
+├── README.md                   # Project documentation
+└── .gitignore                 # Git ignore rules
+```
 
 ---
 
-## 🌐 API Base URL
+## 🔌 API Documentation
 
-- Local development: `http://localhost:8000/api`
-- Health check: `GET /` responds with a simple JSON payload
+### Authentication Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| POST | `/auth/register` | Create new user account | ❌ |
+| POST | `/auth/login` | Authenticate user | ❌ |
+
+### Transaction Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/transaction/all` | Get all user transactions | ✅ |
+| POST | `/transaction/create` | Create new transaction | ✅ |
+| PUT | `/transaction/update/:id` | Update existing transaction | ✅ |
+| DELETE | `/transaction/delete/:id` | Delete transaction | ✅ |
+| POST | `/transaction/bulk-transaction` | Bulk import transactions | ✅ |
+| POST | `/transaction/scan-receipt` | AI-powered receipt scanning | ✅ |
+
+### Analytics Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/analytics/summary` | Get financial summary | ✅ |
+| GET | `/analytics/chart` | Get chart data | ✅ |
+| GET | `/analytics/expense-breakdown` | Get expense breakdown | ✅ |
+
+### Reports Endpoints
+
+| Method | Endpoint | Description | Auth Required |
+|--------|----------|-------------|---------------|
+| GET | `/report/all` | Get user's reports | ✅ |
+| PUT | `/report/setting` | Update report settings | ✅ |
+| POST | `/report/generate` | Generate manual report | ✅ |
+
+**Query Parameters for Analytics & Transactions:**
+- `preset`: Date range preset (`7d`, `30d`, `3m`, etc.)
+- `from`: Custom start date (ISO string)
+- `to`: Custom end date (ISO string)
+- `page`: Page number for pagination
+- `limit`: Items per page
 
 ---
+### Reporting Issues
 
-## 🔎 Notes on Services
-
-- **AI Receipt Scanner** uses the Gemini API. Provide `GEMINI_API_KEY`.
-- **Cloudinary** is required for profile photo uploads. Provide Cloudinary credentials.
-- **Email delivery** for monthly reports uses Resend. Provide `RESEND_API_KEY` and a verified sender.
-- **Cron jobs** run in development mode by default when the server boots.
+Found a bug or have a feature request? Please [open an issue](https://github.com/K-stiles/cashlet/issues) with:
+- Clear description of the problem/feature
+- Steps to reproduce (for bugs)
+- Expected vs actual behavior
+- Screenshots (if applicable)
 
 ---
 
 ## 📄 License
 
-This project is licensed under the MIT License. See `LICENSE.md` for details.
+This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👨‍💻 Author
+
+**K-stiles** - *Full-Stack Developer*
+- GitHub: [@K-stiles](https://github.com/K-stiles)
+- Project Repository: [cashlet](https://github.com/K-stiles/cashlet)
+
+---
+
+## 🙏 Acknowledgments
+
+- **Google Gemini AI** for intelligent receipt processing
+- **Cloudinary** for reliable image management
+- **MongoDB** for flexible data storage
+- **shadcn/ui** for beautiful, accessible components
+- **Recharts** for data visualization capabilities
+
+---
+
+*Made with ❤️ and ☕ by K-stiles*

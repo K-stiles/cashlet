@@ -162,7 +162,7 @@ export function DataTable<TData>({
               disabled={isLoading}
               onValueChange={(value) => handleFilterChange(key, value)}
             >
-              <SelectTrigger className="min-w-[160px]">
+              <SelectTrigger className="min-w-[160px] cursor-pointer">
                 <div className="flex items-center gap-2">
                   <PlusCircleIcon className="h-4 w-4 opacity-50" />
                   <SelectValue placeholder={label} />
@@ -170,7 +170,7 @@ export function DataTable<TData>({
               </SelectTrigger>
               <SelectContent>
                 {options.map((opt) => (
-                  <SelectItem key={opt.value} value={opt.value}>
+                  <SelectItem key={opt.value} value={opt.value} className="cursor-pointer">
                     {opt.label}
                   </SelectItem>
                 ))}
@@ -182,7 +182,6 @@ export function DataTable<TData>({
             Object.keys(rowSelection).length > 0 ||
             Object.keys(filterValues).length > 0) && (
             <Button
-              variant="ghost"
               disabled={isLoading || isBulkDeleting}
               onClick={handleClear}
               className="h-8 px-2"

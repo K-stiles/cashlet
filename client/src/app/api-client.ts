@@ -18,5 +18,10 @@ export const apiClient = createApi({
   baseQuery: baseQuery,
   refetchOnMountOrArgChange: true, // Refetch on mount or arg change
   tagTypes: ["transactions", "analytics", "billingSubscription"], // Tag types for RTK Query
-  endpoints: () => ({}), // Endpoints for RTK Query
+
+  // Endpoints for RTK Query
+  endpoints: () => ({
+    // No endpoints defined yet,
+    // we can temporarily leave this empty && inject the endpoints in other files
+  }),
 });

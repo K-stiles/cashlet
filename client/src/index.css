@@ -131,7 +131,7 @@ body {
   --secondary-dark-color: #1a1e2a;
   --max-width: 78rem;
   /* ============================ */
-  --radius: 0.65rem;
+  --radius: 0rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
   --card: oklch(1 0 0);
@@ -213,8 +213,4 @@ body {
   }
 }
 
-/* --chart-1: oklch(0.37 0.14 146.5);
---chart-2: oklch(0.65 0.16 147.2);
---chart-3: oklch(0.48 0.19 148.6);
---chart-4: oklch(0.28 0.11 145.8);
---chart-5: oklch(0.18 0.08 147.0); */
+
