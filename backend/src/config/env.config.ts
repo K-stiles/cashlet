@@ -3,7 +3,7 @@ import { getEnv } from "../utils/get-env";
 const envConfig = () => ({
   NODE_ENV: getEnv("NODE_ENV", "development"),
 
-  PORT: getEnv("PORT", "8000"),
+  PORT: getEnv("PORT", "8080"),
   BASE_PATH: getEnv("BASE_PATH", "/api"),
   MONGO_URI: getEnv("MONGO_URI"),
 
