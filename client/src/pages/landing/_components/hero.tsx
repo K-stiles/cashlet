@@ -60,8 +60,8 @@ const LeftCol = () => (
 const RightCol = () => (
   <div className="relative bg-red-00 transition-all duration-300 ease-in-out">
     <img
-      src="https://images.pexels.com/photos/6694570/pexels-photo-6694570.jpeg?auto=compress&cs=tinysrgb&w=600"
-      alt="Professional"
+      src="https://plus.unsplash.com/premium_photo-1741298260522-5047a3dbb8ab?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=compress&cs=tinysrgb&w=600"
+      alt="financial stability"
       className={cn(
         " ml-auto w-full rounded-2xl object-cover opacity-90 shadow-xl",
         "ring-4 ring-primary/30"
@@ -69,12 +69,12 @@ const RightCol = () => (
     />
     <img
       src="https://images.pexels.com/photos/3760824/pexels-photo-3760824.jpeg?auto=compress&cs=tinysrgb&w=600"
-      alt="Professional"
+      alt="happy client"
       className="absolute -right-8 -top-8 h-48 w-48 rounded-2xl object-cover opacity-95 shadow-xl"
     />
     <img
       src="https://images.pexels.com/photos/3206079/pexels-photo-3206079.jpeg?auto=compress&cs=tinysrgb&w=600"
-      alt="Professional"
+      alt="team meeting"
       className="hidden md:block absolute -left-8 bottom-20 h-48 w-48 rounded-2xl object-cover opacity-95 shadow-xl"
     />
   </div>
